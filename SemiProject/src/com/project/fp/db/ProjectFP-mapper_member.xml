@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.project.fp.member">
+
+	<select id="selectList" resultType="MemberDto">
+
+		SELECT MEMBER_ID,
+		MEMBER_PASSWORD, MEMBER_NAME, MEMBER_NICNAME,
+		MEMBER_EMAIL,
+		MEMBER_PHONE, MEMBER_ADDR, MEMBER_GRADE,
+		MEMBER_JOIN, MEMBER_ANIMAL,
+		MEMBER_POINT, MEMBER_DR_INFO,
+		MEMBER_NOTIFY
+		FROM MEMBER
+		WHERE
+		MEMBER_GRADE != '관리자'
+		ORDER BY
+		MEMBER_ID DESC
+	</select>
+
+	<select id="selectDoctorList" resultType="MemberDto">
+
+		SELECT MEMBER_ID,
+		MEMBER_PASSWORD, MEMBER_NAME, MEMBER_NICNAME,
+		MEMBER_EMAIL,
+		MEMBER_PHONE, MEMBER_ADDR, MEMBER_GRADE,
+		MEMBER_JOIN, MEMBER_ANIMAL,
+		MEMBER_POINT, MEMBER_DR_INFO,
+		MEMBER_NOTIFY
+		FROM MEMBER
+		WHERE
+		MEMBER_GRADE = '전문의'
+		ORDER BY
+		MEMBER_ID DESC
+	</select>
+
+	<select id="selectDoctorListPaging"
+		parameterType="com.project.fp.dto.PagingDto" resultType="MemberDto">
+		SELECT b.rnum,b.MEMBER_ID,
+		b.MEMBER_PASSWORD, b.MEMBER_NAME,
+		b.MEMBER_NICNAME,
+		b.MEMBER_EMAIL,
+		b.MEMBER_PHONE, b.MEMBER_ADDR,
+		b.MEMBER_GRADE,
+		b.MEMBER_JOIN, b.MEMBER_ANIMAL,
+		b.MEMBER_POINT,
+		b.MEMBER_DR_INFO,
+		b.MEMBER_NOTIFY
+		FROM
+		(SELECT rownum as rnum
+		,a.MEMBER_ID,
+		a.MEMBER_PASSWORD, a.MEMBER_NAME, a.MEMBER_NICNAME,
+		a.MEMBER_EMAIL,
+		a.MEMBER_PHONE, a.MEMBER_ADDR, a.MEMBER_GRADE,
+		a.MEMBER_JOIN, a.MEMBER_ANIMAL,
+		a.MEMBER_POINT, a.MEMBER_DR_INFO,
+		a.MEMBER_NOTIFY
+		FROM(
+		SELECT MEMBER_ID,
+		MEMBER_PASSWORD, MEMBER_NAME,
+		MEMBER_NICNAME,
+		MEMBER_EMAIL,
+		MEMBER_PHONE, MEMBER_ADDR, MEMBER_GRADE,
+		MEMBER_JOIN, MEMBER_ANIMAL,
+		MEMBER_POINT, MEMBER_DR_INFO,
+		MEMBER_NOTIFY
+		FROM MEMBER
+		WHERE MEMBER_GRADE = '전문의'
+		ORDER BY
+		MEMBER_ID DESC)a
+		where
+		rownum <![CDATA[ <= ]]>
+		#{pageEnd})b
+		where b.rnum <![CDATA[ >= ]]>
+		#{pageBegin}
+	</select>
+
+	<select id="selectSerch" parameterType="MemberDto"
+		resultType="MemberDto">
+		SELECT MEMBER_ID, MEMBER_PASSWORD, MEMBER_NAME,
+		MEMBER_NICNAME,
+		MEMBER_EMAIL, MEMBER_PHONE, MEMBER_ADDR, MEMBER_GRADE,
+		MEMBER_JOIN, MEMBER_ANIMAL, MEMBER_POINT, MEMBER_DR_INFO,
+		MEMBER_NOTIFY
+		FROM MEMBER
+		WHERE MEMBER_ID = #{member_id}
+	</select>
+	<select id="selectIdSerch" parameterType="MemberDto"
+		resultType="MemberDto">
+		SELECT MEMBER_ID, MEMBER_PASSWORD, MEMBER_NAME,
+		MEMBER_NICNAME,
+		MEMBER_EMAIL, MEMBER_PHONE, MEMBER_ADDR, MEMBER_GRADE,
+		MEMBER_JOIN, MEMBER_ANIMAL, MEMBER_POINT, MEMBER_DR_INFO,
+		MEMBER_NOTIFY
+		FROM MEMBER
+		WHERE MEMBER_NAME = #{member_name}
+		AND
+		MEMBER_EMAIL = #{member_email}
+	</select>
+	<select id="selectOne" parameterType="MemberDto"
+		resultType="MemberDto">
+
+		SELECT MEMBER_ID, MEMBER_PASSWORD, MEMBER_NAME,
+		MEMBER_NICNAME,
+		MEMBER_EMAIL, MEMBER_PHONE, MEMBER_ADDR, MEMBER_GRADE,
+		MEMBER_JOIN, MEMBER_ANIMAL, MEMBER_POINT, MEMBER_DR_INFO,
+		MEMBER_NOTIFY
+		FROM MEMBER
+		WHERE MEMBER_ID = #{member_id} AND
+		MEMBER_PASSWORD =
+		#{member_password}
+	</select>
+
+	<select id="selectDetail" resultType="MemberDto">
+
+		SELECT MEMBER_ID,
+		MEMBER_NAME,
+		MEMBER_NICNAME,
+		MEMBER_EMAIL, MEMBER_PHONE, MEMBER_ADDR,
+		MEMBER_GRADE,
+		MEMBER_JOIN, MEMBER_ANIMAL, MEMBER_POINT, MEMBER_DR_INFO,
+		MEMBER_NOTIFY
+		FROM MEMBER
+		WHERE MEMBER_ID = #{member_id}
+	</select>
+
+	<insert id="insert" parameterType="MemberDto">
+		INSERT INTO MEMBER
+		VALUES(#{member_id}, #{member_password}, #{member_name},
+		#{member_nicname},
+		#{member_email}, #{member_phone}, #{member_addr},
+		#{member_grade},
+		#{member_join}, #{member_animal}, #{member_point},
+		#{member_dr_info},
+		#{member_notify})
+	</insert>
+
+	<update id="update" parameterType="MemberDto">
+		UPDATE MEMBER
+		SET
+		MEMBER_PASSWORD = #{member_password}
+		WHERE MEMBER_ID = #{member_id}
+	</update>
+
+	<update id="mypageupdate" parameterType="MemberDto">
+		UPDATE MEMBER
+		SET
+		MEMBER_NICNAME = #{member_nicname},
+		MEMBER_EMAIL = #{member_email},
+		MEMBER_PHONE = #{member_phone},
+		MEMBER_ADDR = #{member_addr},
+		MEMBER_ANIMAL = #{member_animal}
+		WHERE MEMBER_ID = #{member_id}
+	</update>
+
+	<update id="mypagemod" parameterType="MemberDto">
+		UPDATE MEMBER
+		SET
+		MEMBER_NICNAME = #{member_nicname},
+		MEMBER_EMAIL = #{member_email},
+		MEMBER_PHONE = #{member_phone},
+		MEMBER_ADDR = #{member_addr},
+		MEMBER_PASSWORD = #{member_password}
+		WHERE MEMBER_ID = #{member_id}
+	</update>
+
+	<update id="myanimal_update" parameterType="MemberDto">
+		UPDATE MEMBER
+		SET
+		MEMBER_ANIMAL = #{member_animal}
+		WHERE MEMBER_ID = #{member_id}
+	</update>
+
+
+	<update id="grade_update" parameterType="MemberDto">
+		UPDATE MEMBER
+		SET
+		MEMBER_GRADE = #{member_grade}
+		WHERE MEMBER_ID = #{member_id}
+	</update>
+
+	<delete id="delete" parameterType="String">
+		UPDATE MEMBER
+		SET MEMBER_JOIN =
+		'N'
+		WHERE MEMBER_ID = #{member_id}
+	</delete>
+
+</mapper>

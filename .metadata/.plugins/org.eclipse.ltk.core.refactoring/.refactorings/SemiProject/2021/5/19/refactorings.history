@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SemiProject/WebContent/cal_detail.jsp&apos; to &apos;popup_calDetail.jsp&apos;" description="Rename resource &apos;cal_detail.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/cal_detail.jsp" name="popup_calDetail.jsp" stamp="1620040966849" updateReferences="true"/>
+</session>

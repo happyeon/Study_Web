@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		function getParameterValues() {
+			// 영 대소문자, 숫자, 그리고 *-_.을 제외한 모든 문자를 유니코드 형식으로 변환
+			var name = encodeURIComponent($("#name").val());
+			var kor = $("#kor").val();
+			var eng = $("#eng").val();
+			var math = $("#math").val();
+			
+			/* query String : key = value 형태로 값 전달, get 방식(그래서 주소창에 보임)*/
+			return "?name="+name+"&kor="+kor+"&eng="+eng+"&math="+math;
+		}
+		
+		$(function() {
+			$("#process").click(function(){
+				var queryString = getParameterValues();
+				//alert(queryString);
+				// https://api.jquery.com/jQuery.ajax/
+				$.ajax({
+					url:"score.do"+queryString,
+					/*응답받는 객체가 json으로 바뀜(문자열을 객체로 바꿔줌)*/
+					dataType:"json",
+					// msg -> 응답받은 데이터
+					success:function(msg){
+						// console.log(msg);
+						// console.log(typeof(msg));
+						// 인코딩된 문자열을 사람이 읽을 수 있는 형태로 다시 바꿔줌
+						$("#result").html(decodeURIComponent(msg.name) + "<br/>총점:" + msg.sum + "<br/>평균:" + msg.avg);
+					},
+					error:function(){
+						alert("통신 실패");
+					}
+				});
+			});
+		});
+	
+	</script>
+
+</head>
+<body>
+
+	<h1>성적 처리 프로그램</h1>
+
+	 이름 : <input type="text" id="name" /><br/>
+	 국어 : <input type="text" id="kor" /><br/>
+	 영어 : <input type="text" id="eng" /><br/>
+	 수학 : <input type="text" id="math" /><br/>
+	 <input type="button" id="process" value="성적 처리" /><br/>
+	 <br/>
+	 <div id="result"></div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+			<item value="C:\Workspaces\Workspace_Web\Jsp01_MyBoard"/>
+			<item value="C:\Workspaces\Workspace_Web\Jsp00_Hello"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\happy\Downloads\SemiProject-suyeon.zip"/>
+			<item value="C:\Users\happy\Downloads\SemiProject-master (2).zip"/>
+			<item value="C:\Users\happy\Downloads\SemiProject-master (1).zip"/>
+			<item value="C:\Users\happy\OneDrive\바탕 화면\11.zip"/>
+			<item value="C:\Users\happy\OneDrive\바탕 화면\se11.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp13_CalBoard.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp12_Weather.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp11_KoreaBikeStand.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp10_Ajax02.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp10_Ajax01.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp09_AnswerBoard_Del.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp09_AnswerBoard.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp08_3_MVC_Mybatis.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp08_3_MVC.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp08_2_MVC.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp08_1_MVC.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp07_EL_JSTL.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp06_Scope.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp05_HelloServlet.zip"/>
+			<item value="C:\Users\happy\OneDrive\문서\카카오톡 받은 파일\Jsp04_LoginBoard.zip"/>
+		</list>
+	</section>
+</section>

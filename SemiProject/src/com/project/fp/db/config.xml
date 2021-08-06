@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<properties resource="com/project/fp/db/db.properties"></properties>
+	<typeAliases>
+		<typeAlias type="com.project.fp.dto.AnimalDto" alias="AnimalDto" />
+		<typeAlias type="com.project.fp.dto.BoardDto" alias="BoardDto" />
+		<typeAlias type="com.project.fp.dto.Chat_ContentDto" alias="Chat_ContentDto" />
+		<typeAlias type="com.project.fp.dto.ChatDto" alias="ChatDto" />
+		<typeAlias type="com.project.fp.dto.File_TableDto" alias="File_TableDto" />
+		<typeAlias type="com.project.fp.dto.MemberDto" alias="MemberDto" />
+		<typeAlias type="com.project.fp.dto.Order_TableDto" alias="Order_TableDto" />
+		<typeAlias type="com.project.fp.dto.ProductDto" alias="ProductDto" />
+		<typeAlias type="com.project.fp.dto.ReceiveDto" alias="ReceiveDto" />
+		<typeAlias type="com.project.fp.dto.HospitalDto" alias="HospitalDto" />
+		<typeAlias type="com.project.fp.dto.Lost_AnimalDto" alias="Lost_AnimalDto" />
+		<typeAlias type="com.project.fp.dto.MycalDto" alias="MycalDto" />
+	</typeAliases>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_animal.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_member.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_board.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_File_Table.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_Hospital.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_Order_Table.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_Board_Reply.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_Chat_Content.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_chat.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_Product.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_Lost_Animal.xml"/>
+		<mapper resource="com/project/fp/db/ProjectFP-mapper_Mycal.xml"/>
+	</mappers>
+</configuration>

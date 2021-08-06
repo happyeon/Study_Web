@@ -1,0 +1,6 @@
+127.0.0.1 - - [12/Apr/2021:01:16:23 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [12/Apr/2021:01:16:25 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [12/Apr/2021:01:16:27 +0900] "GET /Jsp01_MyBoard/mylist.jsp HTTP/1.1" 200 1674
+0:0:0:0:0:0:0:1 - - [12/Apr/2021:01:16:28 +0900] "GET /Jsp01_MyBoard/myselect.jsp?myno=21 HTTP/1.1" 200 762
+0:0:0:0:0:0:0:1 - - [12/Apr/2021:01:16:30 +0900] "GET /Jsp01_MyBoard/mydelete.jsp?myno=21 HTTP/1.1" 200 254
+0:0:0:0:0:0:0:1 - - [12/Apr/2021:01:16:31 +0900] "GET /Jsp01_MyBoard/mylist.jsp HTTP/1.1" 200 1464

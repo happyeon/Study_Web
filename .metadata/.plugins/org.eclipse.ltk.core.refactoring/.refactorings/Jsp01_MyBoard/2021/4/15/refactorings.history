@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JDBCTemplate.java&apos; to &apos;Jsp13_CalBoard/src/com.cal.db&apos;&#x0D;&#x0A;- Original project: &apos;Jsp01_MyBoard&apos;&#x0D;&#x0A;- Destination element: &apos;Jsp13_CalBoard/src/com.cal.db&apos;&#x0D;&#x0A;- Original element: &apos;com.my.db.JDBCTemplate.java&apos;" description="Copy compilation unit" destination="=Jsp13_CalBoard/src&lt;com.cal.db" element1="/src&lt;com.my.db{JDBCTemplate.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1617887666046" units="1" version="1.0"/>
+</session>

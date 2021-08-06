@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Jsp08_3_MVC_Mybatis_request_uri&apos;" deleteContents="true" description="Delete resource &apos;Jsp08_3_MVC_Mybatis_request_uri&apos;" element1="/Jsp08_3_MVC_Mybatis_request_uri" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1621238705217"/>
+</session>

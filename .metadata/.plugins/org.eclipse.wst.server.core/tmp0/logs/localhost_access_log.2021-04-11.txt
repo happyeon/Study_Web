@@ -1,0 +1,12 @@
+127.0.0.1 - - [11/Apr/2021:15:43:39 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:41 +0900] "GET /Jsp01_MyBoard/ HTTP/1.1" 200 163
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:41 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:48 +0900] "GET /Jsp01_MyBoard/mylist.jsp HTTP/1.1" 200 1264
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:50 +0900] "GET /Jsp01_MyBoard/myselect.jsp?myno=21 HTTP/1.1" 200 765
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:52 +0900] "GET /Jsp01_MyBoard/myupdate.jsp?myno=21 HTTP/1.1" 200 797
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:55 +0900] "POST /Jsp01_MyBoard/myupdateres.jsp HTTP/1.1" 200 273
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:56 +0900] "GET /Jsp01_MyBoard/myselect.jsp?myno=21 HTTP/1.1" 200 767
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:57 +0900] "GET /Jsp01_MyBoard/mylist.jsp HTTP/1.1" 200 1265
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:43:58 +0900] "GET /Jsp01_MyBoard/myinsert.jsp HTTP/1.1" 200 727
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:44:03 +0900] "POST /Jsp01_MyBoard/myinsertres.jsp HTTP/1.1" 200 266
+0:0:0:0:0:0:0:1 - - [11/Apr/2021:15:44:04 +0900] "GET /Jsp01_MyBoard/mylist.jsp HTTP/1.1" 200 1400

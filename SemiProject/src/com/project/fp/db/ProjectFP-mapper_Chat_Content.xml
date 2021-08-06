@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.project.fp.chat_content">
+
+	<select id="selectList" resultType="Chat_ContentDto">
+		SELECT CH_NUM, NUMBER_NICNAME, CH_CONTENT, CH_CONTENT_DATE
+		FROM CHAT_CONTENT
+		ORDER BY CH_NUM DESC
+	</select>
+	
+	<select id="selectOne" parameterType="int" resultType="Chat_ContentDto">
+		SELECT CH_NUM, MEMBER_NICNAME, CH_CONTENT, CH_CONTENT_DATE
+		FROM CHAT_CONTENT
+		WHERE CH_NUM = #{ch_num}
+	</select>
+	
+	<insert id="insert" parameterType="Chat_ContentDto">
+		INSERT INTO CHAT_CONTENT
+		VALUES(#{ch_num}, #{member_nicname}, #{ch_content}, SYSDATE)
+	</insert>
+
+
+	<delete id="delete" parameterType="Chat_ContentDto">
+		DELETE FROM CHAT_CONTENT
+		WHERE CH_NUM = #{ch_num}
+	</delete>
+
+</mapper>

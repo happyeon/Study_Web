@@ -1,0 +1,6 @@
+127.0.0.1 - - [20/Apr/2021:21:13:39 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [20/Apr/2021:21:13:40 +0900] "GET /Jsp08_2_MVC/myboardlist.jsp HTTP/1.1" 200 686
+0:0:0:0:0:0:0:1 - - [20/Apr/2021:21:13:49 +0900] "GET /Jsp08_2_MVC/mymvc.do?command=insertform HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [20/Apr/2021:21:13:49 +0900] "GET /Jsp08_2_MVC/myboardinsert.jsp HTTP/1.1" 200 771
+0:0:0:0:0:0:0:1 - - [20/Apr/2021:21:13:56 +0900] "POST /Jsp08_2_MVC/mymvc.do HTTP/1.1" 200 105
+0:0:0:0:0:0:0:1 - - [20/Apr/2021:21:13:57 +0900] "GET /Jsp08_2_MVC/mymvc.do?command=list HTTP/1.1" 200 14793
